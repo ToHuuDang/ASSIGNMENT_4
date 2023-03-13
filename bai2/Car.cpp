@@ -47,9 +47,14 @@ class Car{
 int main(int argc, char const *argv[])
 {
     Car c1(1998, "ToYoTa");
-    for (int i = 0; i < 5; i++)
-    {
-        
+     for (int i = 1; i <= 5; i++) {
+        c1.accelerate();
+        cout << "Current speed after acceleration #" << i << ": " << c1.getSpeed() << endl;
+    }
+    
+    for (int i = 1; i <= 5; i++) {
+        c1.brake();
+        cout << "Current speed after brake #" << i << ": " << c1.getSpeed() << endl;
     }
     
     return 0;
